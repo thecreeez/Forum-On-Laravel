@@ -23,8 +23,8 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-5">Template thread</h1>
-            <h4>Template thread text</h4>
+            <h1 class="display-5"> {{ $thread['name'] }} </h1>
+            <h4> {{ $thread['text'] }} </h4>
         </div>
     </div>
 

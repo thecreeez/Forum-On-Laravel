@@ -30,16 +30,17 @@
 
     <div class="my-3 p-3 bg-white rounded box-shadow">
       <h6 class="border-bottom border-gray pb-2 mb-0">Последняя активность</h6>
-          <a href="/thread">
+          @foreach($threads as $thread)
+            <a href="/thread/{{$thread->id}}">
               <div class="media text-muted pt-3">
                   <img alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" src="https://yt3.googleusercontent.com/WgW9_IWSVAbECTYYwMOannWIf2ddp4ceuvcm6DIsz-dIskqYQfWR-nX_1cxtpYD_RDHgl4skDeY=s900-c-k-c0x00ffffff-no-rj" data-holder-rendered="true">
                   <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                   <strong class="d-block text-gray-dark">TheCreeeZ</strong>
-                  Template thread
+                  {{$thread->name}}
                   </p>
               </div>
-          </a>
+            </a>
+          @endforeach
     </div>
-
   </main>
 </html>

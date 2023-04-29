@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/thread', function () {
-    return view('thread');
-});
+Route::get('/', [MainController::class, 'index']);
+Route::get('/thread/{threadId}', [MainController::class, 'thread']);
